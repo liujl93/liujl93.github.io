@@ -28,7 +28,7 @@
     
     <url>
     
-      <loc>https://liujl93.github.io/publication/</loc>
+      <loc>https://liujl93.github.io/talk/</loc>
       <lastmod>2017-01-01T00:00:00-07:00</lastmod>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
     
-      <loc>https://liujl93.github.io/talk/</loc>
+      <loc>https://liujl93.github.io/publication/</loc>
       <lastmod>2017-01-01T00:00:00-07:00</lastmod>
     </url>
     
@@ -179,9 +179,40 @@
     
     <url>
     
+      <loc>https://liujl93.github.io/authors/haonan-wang/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://liujl93.github.io/</loc>
       <lastmod>2017-10-15T00:00:00-06:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/authors/jialuo-liu/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/authors/jun-zhu/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/talk/krylov/</loc>
     </url>
     
   
@@ -215,7 +246,7 @@
     
     <url>
     
-      <loc>https://liujl93.github.io/talk/example/</loc>
+      <loc>https://liujl93.github.io/talk/spl/</loc>
     </url>
     
   
@@ -239,6 +270,14 @@
     
       <loc>https://liujl93.github.io/tags/</loc>
       <lastmod>2018-01-13T00:00:00-07:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/authors/tingjin-chu/</loc>
       <priority>0</priority>
     </url>
     

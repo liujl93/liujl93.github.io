@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Jialuo Liu</title>
-    <link>https://liujl93.github.io/talk/</link>
-    <description>Recent content in Projects on Jialuo Liu</description>
+    <title>Jialuo Liu</title>
+    <link>https://liujl93.github.io/authors/jialuo-liu/</link>
+    <description>Recent content on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
     
-	<atom:link href="https://liujl93.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://liujl93.github.io/authors/jialuo-liu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
