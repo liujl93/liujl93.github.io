@@ -19,7 +19,7 @@
       <guid>https://liujl93.github.io/post/rcpp/</guid>
       <description>This post is related to a short course High Performance Computing for Spatial Data taught by Dr. Andrew Finley and Dr. Dorit Hammerling at 2018 ENVR Workshop. An useful slide can be found here.
 There are three functions for integrating R and C/C++:
- .Call() External() .C()  .Call() In this short course, a detailed explanation of .Call() and is given. In brief, you will need
+ .Call() External() .C()  .Call() In this short course, a detailed explanation of the function .Call() is given. In brief, you will need
  A C/C++ function (filename.</description>
     </item>
     

@@ -29,7 +29,7 @@
 
 &lt;h2 id=&#34;call&#34;&gt;.Call()&lt;/h2&gt;
 
-&lt;p&gt;In this short course, a detailed explanation of .Call() and is given. In brief, you will need&lt;/p&gt;
+&lt;p&gt;In this short course, a detailed explanation of the function .Call() is given. In brief, you will need&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;A C/C++ function (filename.cpp) and an R wrapper function (filename.R)&lt;/li&gt;
