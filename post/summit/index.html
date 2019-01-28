@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This project developed methods for inference in spatio-temporal models that allow for locally stationarity.  A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors. The theoretical properties for the profile likelihood estimators, and as a by-product, for MLE in zero-mean and simple linear models, are established, including consistency and asymptotic normality. We demonstrate the finite sample properties of our estimation procedure via simulations and a real data example. ">
+  <meta name="description" content="Rmpi implementation on Summit/Cray">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://liujl93.github.io/talk/spl/">
+  <link rel="alternate" hreflang="en-us" href="https://liujl93.github.io/post/summit/">
 
   
 
@@ -132,31 +132,33 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://liujl93.github.io/talk/spl/">
+  <link rel="canonical" href="https://liujl93.github.io/post/summit/">
 
   
   
   
   
     
+    
   
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Jialuo Liu">
-  <meta property="og:url" content="https://liujl93.github.io/talk/spl/">
-  <meta property="og:title" content="Semiparametric Modeling and Bandwidth Selection for Continuous-Time Geostatistical Data | Jialuo Liu">
-  <meta property="og:description" content="This project developed methods for inference in spatio-temporal models that allow for locally stationarity.  A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors. The theoretical properties for the profile likelihood estimators, and as a by-product, for MLE in zero-mean and simple linear models, are established, including consistency and asymptotic normality. We demonstrate the finite sample properties of our estimation procedure via simulations and a real data example. "><meta property="og:image" content="https://liujl93.github.io/talk/spl/featured.png">
+  <meta property="og:url" content="https://liujl93.github.io/post/summit/">
+  <meta property="og:title" content="Parallel Programming in R on High Performance Computing (HPC) systems in CSU | Jialuo Liu">
+  <meta property="og:description" content="Rmpi implementation on Summit/Cray"><meta property="og:image" content="https://liujl93.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2019-01-27T00:00:00-07:00">
   
+  <meta property="article:modified_time" content="2018-01-27T00:00:00-07:00">
   
+
   
 
   
 
-  
-
-  <title>Semiparametric Modeling and Bandwidth Selection for Continuous-Time Geostatistical Data | Jialuo Liu</title>
+  <title>Parallel Programming in R on High Performance Computing (HPC) systems in CSU | Jialuo Liu</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -368,7 +370,8 @@
   </div>
 </nav>
 
-<div class="pub" itemscope itemtype="http://schema.org/Event">
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
@@ -389,16 +392,18 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Semiparametric Modeling and Bandwidth Selection for Continuous-Time Geostatistical Data</h1>
+  <h1 itemprop="name">Parallel Programming in R on High Performance Computing (HPC) systems in CSU</h1>
 
+  
+  <p class="page-subtitle">Rmpi implementation on Summit/Cray</p>
   
 
   
     
 
 
-<meta content="" itemprop="datePublished">
-<meta content="" itemprop="dateModified">
+<meta content="2019-01-27 00:00:00 -0700 MST" itemprop="datePublished">
+<meta content="2018-01-27 00:00:00 -0700 MST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -411,21 +416,6 @@
       <span itemprop="name">
         <a href="/authors/jialuo-liu/">Jialuo Liu</a>
       </span>
-    </span>, 
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        <a href="/authors/tingjin-chu/">Tingjin Chu</a>
-      </span>
-    </span>, 
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        <a href="/authors/jun-zhu/">Jun Zhu</a>
-      </span>
-    </span>, 
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        <a href="/authors/haonan-wang/">Haonan Wang</a>
-      </span>
     </span>
     
   </div>
@@ -433,7 +423,22 @@
   
 
   
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Jan 27, 2018</time>
+  </span>
+  
 
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
   
 
   
@@ -447,14 +452,14 @@
   <ul class="share">
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fliujl93.github.io%2ftalk%2fspl%2f&amp;title=Semiparametric%20Modeling%20and%20Bandwidth%20Selection%20for%20Continuous-Time%20Geostatistical%20Data"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fliujl93.github.io%2fpost%2fsummit%2f&amp;title=Parallel%20Programming%20in%20R%20on%20High%20Performance%20Computing%20%28HPC%29%20systems%20in%20CSU"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Semiparametric%20Modeling%20and%20Bandwidth%20Selection%20for%20Continuous-Time%20Geostatistical%20Data&amp;body=https%3a%2f%2fliujl93.github.io%2ftalk%2fspl%2f">
+         href="mailto:?subject=Parallel%20Programming%20in%20R%20on%20High%20Performance%20Computing%20%28HPC%29%20systems%20in%20CSU&amp;body=https%3a%2f%2fliujl93.github.io%2fpost%2fsummit%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -483,61 +488,6 @@
 
 
 
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/liujl93/STplm" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="/files/SPL_poster_v4.pdf" target="_blank" rel="noopener">
-  Poster
-</a>
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="/files/stplm_slides.pdf" target="_blank" rel="noopener">
-  Slides
-</a>
-
-
-
-
-
-
-
-</div>
-
 
   
 </div>
@@ -546,47 +496,199 @@
 
   <div class="article-container">
 
-    
-      <h3>Abstract</h3>
-      <p class="pub-abstract" itemprop="text">This project developed methods for inference in spatio-temporal models that allow for locally stationarity.  A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors. The theoretical properties for the profile likelihood estimators, and as a by-product, for MLE in zero-mean and simple linear models, are established, including consistency and asymptotic normality. We demonstrate the finite sample properties of our estimation procedure via simulations and a real data example.</p>
-    
-
-
-    <div class="space-below"></div>
-
-    <div class="article-style">
+    <div class="article-style" itemprop="articleBody">
       
+
+<p>Parallel computing in Python and Matlab is similar, a useful post can be found <a href="https://github.com/ResearchComputing/Parallelization_Workshop" target="_blank">here</a>.</p>
+
+<p>Good problems for such type of high performance computing systems are the so-called &ldquo;Embarassingly parallelizable problems&rdquo;. That is, the problem can be separated to a number of mutually independent tasks.</p>
+
+<h2 id="road-map-for-running-your-r-code-on-summit">Road-map for Running Your R Code on Summit</h2>
+
+<h3 id="1-code-preparation">1. Code Preparation.</h3>
+
+<p>For convenience, I often prepare three files:</p>
+
+<ul>
+<li>A bash file: (job.txt)</li>
+</ul>
+
+<h4 id="summit">Summit</h4>
+
+<pre><code class="language-bash">#!/bin/bash
+
+#SBATCH -p shas                   # Send this job to the shas partition
+#SBATCH -N 10                      # number of nodes
+#SBTACH -J YourJobDescription
+##SBATCH --mem=96000
+#SBATCH --ntasks-per-node=24
+#SBATCH -t 0-24:00                  # wall time (D-HH:MM)
+#SBATCH -o spl.%j.out             # STDOUT (%j = JobId)
+#SBATCH -e spl.%j.err             # STDERR (%j = JobId)
+#SBATCH --mail-type=END,FAIL        # notifications for job done &amp; fail
+#SBATCH --mail-user=YourEmailAddress # send-to address
+
+R_PROFILE=/home/&lt;USERNAME&gt;/R/x86_64-pc-linux-gnu-library/3.5/snow/RMPISNOWprofile;
+export R_PROFILE
+module load R
+ml gcc
+ml openmpi/2.0.1
+
+date
+START=`date +%s`
+mpirun Rscript --no-save control.R &lt;par1&gt; &lt;par2&gt; &lt;par3&gt; ${SLURM_JOBID}.R_output
+END=`date +%s`
+date
+ELAPSED=$(( $END - $START ))
+echo &quot;Elapsed time (hrs):
+$(echo &quot;scale=10; $ELAPSED/3600&quot; | bc)&quot;
+</code></pre>
+
+<h4 id="cray">Cray</h4>
+
+<pre><code class="language-bash">#!/bin/bash
+#PBS -N mod
+#PBS -j oe
+#PBS -l mppwidth=120 # number of cores
+#PBS -l walltime=01:00:00
+#PBS -q small
+cd $PBS_O_WORKDIR
+R_PROFILE=$HOME/lustrefs/R/library/snow/RMPISNOWprofile; export R_PROFILE
+date
+START=`date +%s`
+aprun -B R --no-save --no-restore CMD BATCH control.R $PBS_JOBNAME.R_output
+END=`date +%s`
+date
+ELAPSED=$(( $END - $START ))
+echo &quot;Elapsed time (hrs):
+$(echo &quot;scale=10; $ELAPSED/3600&quot; | bc)&quot;
+</code></pre>
+
+<ul>
+<li>A control R file: (control.R).</li>
+</ul>
+
+<pre><code class="language-r"># -------------------------------------------------- #
+#        Install and load needed R packages          #
+# -------------------------------------------------- #
+list.of.packages &lt;- c(&quot;Rmpi&quot;,&quot;doSNOW&quot;,&quot;foreach&quot;,&quot;doRNG&quot;,&quot;iterators&quot;,&quot;data.table&quot;,&quot;parallel&quot;)
+new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
+if(length(new.packages)) install.packages(new.packages)
+invisible(lapply(list.of.packages, require, character.only = TRUE))
+
+# You can pass arguments here
+args &lt;- commandArgs(TRUE)
+par1 &lt;- as.double(args[1])
+par2 &lt;- as.double(args[2])
+par3 &lt;- as.double(args[3])
+
+working.directory = '/path/to/working/directory'
+worker.script = 'main.R'
+
+cl = getMPIcluster()
+clusterExport(cl, ls())
+setwd(working.directory)
+source(worker.script)
+
+clusterEvalQ(cl, setwd(working.directory))
+clusterEvalQ(cl, source(worker.script))
+registerDoSNOW(cl)
+rdata_name = paste0(&quot;Cov&quot;,CovStructure,&quot;Type&quot;,Type,&quot;NS&quot;,ns,&quot;.RData&quot;)
+nreps = 400
+iter0 = 1:nreps
+seedM = rbind(rep(401,nreps),c(iter0),c(iter0))
+res = foreach(iter = 1:400, .combine=list,.maxcombine=400,.options.RNG=seedM,
+              .multicombine=TRUE, .errorhandling = 'remove') %dorng% {
+		res =  run.sim()
+    # I used to save my results for each iteration, in case my code won't finish and lose everything.
+                save(res,file=paste0(working.directory,&quot;/results/par1&quot;,par1,&quot;/par2&quot;,par2,&quot;/par3&quot;,par3,&quot;/res&quot;,iter,&quot;.Rdata&quot;))
+                return(format(object.size(test),units = &quot;Mb&quot;))
+              }
+.Last = NULL
+save.image(rdata_name)
+stopCluster(cl)
+</code></pre>
+
+<ul>
+<li>And an R file containing the main function (main.R).</li>
+</ul>
+
+<h3 id="2-set-up-your-r-environment">2. Set Up Your R environment</h3>
+
+<p>For Summit users, you can follow the instructions <a href="https://github.com/ResearchComputing/Parallelization_Workshop/blob/master/Day4-Parallel_R/01-R-setup.pdf" target="_blank">here</a>.
+For Cray users, you can follow the <a href="https://www.stat.colostate.edu/~jah/Computing_Hints/files/CRAY.tutorial.pdf" target="_blank">instructions</a> by Dr. Jennifer A. Hoeting.</p>
+
+<h3 id="3-submit-your-job">3. Submit your Job</h3>
+
+<p>On Summit, in your terminal, type</p>
+
+<pre><code class="language-bash">sbatch job.txt
+</code></pre>
+
+<p>On Cray, enter</p>
+
+<pre><code class="language-bash">qsub job.txt
+</code></pre>
+
     </div>
 
     
 
 
-
-
-    
-
-
-
-
-
-
+<div class="article-tags">
   
+  <a class="badge badge-light" href="/tags/computing/">Computing</a>
   
-    
+  <a class="badge badge-light" href="/tags/r/">R</a>
   
-  
-
-
-
-
-
-
-
-
-  </div>
 </div>
 
 
+
+
+    
+      
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/stplm/">STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</a></li>
+          
+          <li><a href="/post/rcpp/">Calling C/C&#43;&#43; from R and multithreading with OpenMP</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
 <div class="container">
   <footer class="site-footer">

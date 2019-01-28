@@ -57,6 +57,147 @@
     </item>
     
     <item>
+      <title>Parallel Programming in R on High Performance Computing (HPC) systems in CSU</title>
+      <link>https://liujl93.github.io/post/summit/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/summit/</guid>
+      <description>
+
+&lt;p&gt;Parallel computing in Python and Matlab is similar, a useful post can be found &lt;a href=&#34;https://github.com/ResearchComputing/Parallelization_Workshop&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Good problems for such type of high performance computing systems are the so-called &amp;ldquo;Embarassingly parallelizable problems&amp;rdquo;. That is, the problem can be separated to a number of mutually independent tasks.&lt;/p&gt;
+
+&lt;h2 id=&#34;road-map-for-running-your-r-code-on-summit&#34;&gt;Road-map for Running Your R Code on Summit&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-code-preparation&#34;&gt;1. Code Preparation.&lt;/h3&gt;
+
+&lt;p&gt;For convenience, I often prepare three files:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A bash file: (job.txt)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;summit&#34;&gt;Summit&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+#SBATCH -p shas                   # Send this job to the shas partition
+#SBATCH -N 10                      # number of nodes
+#SBTACH -J YourJobDescription
+##SBATCH --mem=96000
+#SBATCH --ntasks-per-node=24
+#SBATCH -t 0-24:00                  # wall time (D-HH:MM)
+#SBATCH -o spl.%j.out             # STDOUT (%j = JobId)
+#SBATCH -e spl.%j.err             # STDERR (%j = JobId)
+#SBATCH --mail-type=END,FAIL        # notifications for job done &amp;amp; fail
+#SBATCH --mail-user=YourEmailAddress # send-to address
+
+R_PROFILE=/home/&amp;lt;USERNAME&amp;gt;/R/x86_64-pc-linux-gnu-library/3.5/snow/RMPISNOWprofile;
+export R_PROFILE
+module load R
+ml gcc
+ml openmpi/2.0.1
+
+date
+START=`date +%s`
+mpirun Rscript --no-save control.R &amp;lt;par1&amp;gt; &amp;lt;par2&amp;gt; &amp;lt;par3&amp;gt; ${SLURM_JOBID}.R_output
+END=`date +%s`
+date
+ELAPSED=$(( $END - $START ))
+echo &amp;quot;Elapsed time (hrs):
+$(echo &amp;quot;scale=10; $ELAPSED/3600&amp;quot; | bc)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;cray&#34;&gt;Cray&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+#PBS -N mod
+#PBS -j oe
+#PBS -l mppwidth=120 # number of cores
+#PBS -l walltime=01:00:00
+#PBS -q small
+cd $PBS_O_WORKDIR
+R_PROFILE=$HOME/lustrefs/R/library/snow/RMPISNOWprofile; export R_PROFILE
+date
+START=`date +%s`
+aprun -B R --no-save --no-restore CMD BATCH control.R $PBS_JOBNAME.R_output
+END=`date +%s`
+date
+ELAPSED=$(( $END - $START ))
+echo &amp;quot;Elapsed time (hrs):
+$(echo &amp;quot;scale=10; $ELAPSED/3600&amp;quot; | bc)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A control R file: (control.R).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# -------------------------------------------------- #
+#        Install and load needed R packages          #
+# -------------------------------------------------- #
+list.of.packages &amp;lt;- c(&amp;quot;Rmpi&amp;quot;,&amp;quot;doSNOW&amp;quot;,&amp;quot;foreach&amp;quot;,&amp;quot;doRNG&amp;quot;,&amp;quot;iterators&amp;quot;,&amp;quot;data.table&amp;quot;,&amp;quot;parallel&amp;quot;)
+new.packages &amp;lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&amp;quot;Package&amp;quot;])]
+if(length(new.packages)) install.packages(new.packages)
+invisible(lapply(list.of.packages, require, character.only = TRUE))
+
+# You can pass arguments here
+args &amp;lt;- commandArgs(TRUE)
+par1 &amp;lt;- as.double(args[1])
+par2 &amp;lt;- as.double(args[2])
+par3 &amp;lt;- as.double(args[3])
+
+working.directory = &#39;/path/to/working/directory&#39;
+worker.script = &#39;main.R&#39;
+
+cl = getMPIcluster()
+clusterExport(cl, ls())
+setwd(working.directory)
+source(worker.script)
+
+clusterEvalQ(cl, setwd(working.directory))
+clusterEvalQ(cl, source(worker.script))
+registerDoSNOW(cl)
+rdata_name = paste0(&amp;quot;Cov&amp;quot;,CovStructure,&amp;quot;Type&amp;quot;,Type,&amp;quot;NS&amp;quot;,ns,&amp;quot;.RData&amp;quot;)
+nreps = 400
+iter0 = 1:nreps
+seedM = rbind(rep(401,nreps),c(iter0),c(iter0))
+res = foreach(iter = 1:400, .combine=list,.maxcombine=400,.options.RNG=seedM,
+              .multicombine=TRUE, .errorhandling = &#39;remove&#39;) %dorng% {
+		res =  run.sim()
+    # I used to save my results for each iteration, in case my code won&#39;t finish and lose everything.
+                save(res,file=paste0(working.directory,&amp;quot;/results/par1&amp;quot;,par1,&amp;quot;/par2&amp;quot;,par2,&amp;quot;/par3&amp;quot;,par3,&amp;quot;/res&amp;quot;,iter,&amp;quot;.Rdata&amp;quot;))
+                return(format(object.size(test),units = &amp;quot;Mb&amp;quot;))
+              }
+.Last = NULL
+save.image(rdata_name)
+stopCluster(cl)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;And an R file containing the main function (main.R).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-set-up-your-r-environment&#34;&gt;2. Set Up Your R environment&lt;/h3&gt;
+
+&lt;p&gt;For Summit users, you can follow the instructions &lt;a href=&#34;https://github.com/ResearchComputing/Parallelization_Workshop/blob/master/Day4-Parallel_R/01-R-setup.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+For Cray users, you can follow the &lt;a href=&#34;https://www.stat.colostate.edu/~jah/Computing_Hints/files/CRAY.tutorial.pdf&#34; target=&#34;_blank&#34;&gt;instructions&lt;/a&gt; by Dr. Jennifer A. Hoeting.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-submit-your-job&#34;&gt;3. Submit your Job&lt;/h3&gt;
+
+&lt;p&gt;On Summit, in your terminal, type&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sbatch job.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On Cray, enter&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;qsub job.txt
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</title>
       <link>https://liujl93.github.io/post/stplm/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
@@ -76,7 +217,7 @@
 install_github(&amp;quot;liujl93/STplm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Alternatively, one can download the .tar.gz file from the main directory and then run:&lt;/p&gt;
+&lt;p&gt;Alternatively, one can download the .tar.gz file from &lt;a href=&#34;https://github.com/liujl93/STplm/archive/master.zip&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt; and then run:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
