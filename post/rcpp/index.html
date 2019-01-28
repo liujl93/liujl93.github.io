@@ -488,6 +488,45 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="/file/Exercise_1a.pdf" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
   
 </div>
@@ -497,8 +536,9 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>During the <a href="https://community.amstat.org/envr/events/envr2018workshop" target="_blank">2018 ENVR Workshop</a>, I attended the short course &ldquo;High Performance Computing for Spatial Data&rdquo; taught by <a href="http://blue.for.msu.edu/" target="_blank">Dr. Andrew Finley</a> and Dr. Dorit Hammerling.
-The official site for the short course can be accessed <a href="http://blue.for.msu.edu/envr18/" target="_blank">here</a> and the slides can be found <a href="http://blue.for.msu.edu/envr18/slides/R-api.pdf" target="_blank">here</a>.</p>
+      
+
+<p>This post is related to a short course <a href="http://blue.for.msu.edu/envr18/" target="_blank">High Performance Computing for Spatial Data</a> taught by <a href="http://blue.for.msu.edu/" target="_blank">Dr. Andrew Finley</a> and Dr. Dorit Hammerling at <a href="https://community.amstat.org/envr/events/envr2018workshop" target="_blank">2018 ENVR Workshop</a>. An useful slide can be found <a href="http://blue.for.msu.edu/envr18/slides/R-api.pdf" target="_blank">here</a>.</p>
 
 <p>There are three functions for integrating R and C/C++:</p>
 
@@ -508,24 +548,32 @@ The official site for the short course can be accessed <a href="http://blue.for.
 <li>.C()</li>
 </ul>
 
-<p>In this short course, some detailed exercises regarding .Call() can be found. In briefly, you will need</p>
+<h2 id="call">.Call()</h2>
+
+<p>In this short course, a detailed explanation of .Call() and is given. In brief, you will need</p>
 
 <ul>
 <li>A C/C++ function (filename.cpp) and an R wrapper function (filename.R)</li>
 <li>Compile the C/C++ code (in R):</li>
 </ul>
 
-<pre><code class="language-r">  system(&quot;R CMD SHLIB filename.cpp&quot;)
+<pre><code class="language-r">            system(&quot;R CMD SHLIB filename.cpp&quot;)
 </code></pre>
 
 <ul>
 <li>Load the compiled object (filename.so in MacOS or Linux or filename.dll in Windows) in R:</li>
 </ul>
 
-<pre><code class="language-r">dyn.load(&quot;filename.so&quot;)
+<pre><code class="language-r">            dyn.load(&quot;filename.so&quot;)
 </code></pre>
 
-<p>A complete example can be found <a href="exercise_1a.html" target="_blank">here</a>.</p>
+<h2 id="c">.C()</h2>
+
+<p>A good implementation of the function .C() can be found in the R package <a href="https://www.stat.colostate.edu/~wanghn/Rpackages/bdmiso_0.9.tar.gz" target="_blank">bdmiso</a>, which is developed by Dr. Ela Sienkiewicz from CSU.</p>
+
+<h2 id="rcpp">Rcpp()</h2>
+
+<p>An alternative is the <a href="http://www.rcpp.org/" target="_blank">Rcpp</a> package in R. The Rcpp package offers a seamless integration of R and C++. For detailed implementation, you can refer to my <a href="https://github.com/liujl93/STplm" target="_blank">STplm</a> R package.</p>
 
     </div>
 
@@ -571,6 +619,8 @@ The official site for the short course can be accessed <a href="http://blue.for.
         <ul>
           
           <li><a href="/post/stplm/">STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</a></li>
+          
+          <li><a href="/post/getting-started/">STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</a></li>
           
         </ul>
       </div>

@@ -17,9 +17,22 @@
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/rcpp/</guid>
-      <description>During the 2018 ENVR Workshop, I attended the short course &amp;ldquo;High Performance Computing for Spatial Data&amp;rdquo; taught by Dr. Andrew Finley and Dr. Dorit Hammerling. The official site for the short course can be accessed here and the slides can be found here.
+      <description>This post is related to a short course High Performance Computing for Spatial Data taught by Dr. Andrew Finley and Dr. Dorit Hammerling at 2018 ENVR Workshop. An useful slide can be found here.
 There are three functions for integrating R and C/C++:
- .Call() External() .C()  In this short course, some detailed exercises regarding .Call() can be found. In briefly, you will need</description>
+ .Call() External() .C()  .Call() In this short course, a detailed explanation of .Call() and is given. In brief, you will need
+ A C/C++ function (filename.</description>
+    </item>
+    
+    <item>
+      <title>STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</title>
+      <link>https://liujl93.github.io/post/getting-started/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/getting-started/</guid>
+      <description> STplm Spatio-Temporal Partial Linear Model and Bandwidth Selection.
+Installation This package can be installed directly from R by running the following code:
+library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from the main directory and then run:
+install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
     </item>
     
     <item>

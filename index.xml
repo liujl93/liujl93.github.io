@@ -15,8 +15,9 @@
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/rcpp/</guid>
-      <description>&lt;p&gt;During the &lt;a href=&#34;https://community.amstat.org/envr/events/envr2018workshop&#34; target=&#34;_blank&#34;&gt;2018 ENVR Workshop&lt;/a&gt;, I attended the short course &amp;ldquo;High Performance Computing for Spatial Data&amp;rdquo; taught by &lt;a href=&#34;http://blue.for.msu.edu/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Finley&lt;/a&gt; and Dr. Dorit Hammerling.
-The official site for the short course can be accessed &lt;a href=&#34;http://blue.for.msu.edu/envr18/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and the slides can be found &lt;a href=&#34;http://blue.for.msu.edu/envr18/slides/R-api.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      <description>
+
+&lt;p&gt;This post is related to a short course &lt;a href=&#34;http://blue.for.msu.edu/envr18/&#34; target=&#34;_blank&#34;&gt;High Performance Computing for Spatial Data&lt;/a&gt; taught by &lt;a href=&#34;http://blue.for.msu.edu/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Finley&lt;/a&gt; and Dr. Dorit Hammerling at &lt;a href=&#34;https://community.amstat.org/envr/events/envr2018workshop&#34; target=&#34;_blank&#34;&gt;2018 ENVR Workshop&lt;/a&gt;. An useful slide can be found &lt;a href=&#34;http://blue.for.msu.edu/envr18/slides/R-api.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;There are three functions for integrating R and C/C++:&lt;/p&gt;
 
@@ -26,24 +27,59 @@ The official site for the short course can be accessed &lt;a href=&#34;http://bl
 &lt;li&gt;.C()&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this short course, some detailed exercises regarding .Call() can be found. In briefly, you will need&lt;/p&gt;
+&lt;h2 id=&#34;call&#34;&gt;.Call()&lt;/h2&gt;
+
+&lt;p&gt;In this short course, a detailed explanation of .Call() and is given. In brief, you will need&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;A C/C++ function (filename.cpp) and an R wrapper function (filename.R)&lt;/li&gt;
 &lt;li&gt;Compile the C/C++ code (in R):&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;  system(&amp;quot;R CMD SHLIB filename.cpp&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;            system(&amp;quot;R CMD SHLIB filename.cpp&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Load the compiled object (filename.so in MacOS or Linux or filename.dll in Windows) in R:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dyn.load(&amp;quot;filename.so&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;            dyn.load(&amp;quot;filename.so&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;A complete example can be found &lt;a href=&#34;exercise_1a.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;c&#34;&gt;.C()&lt;/h2&gt;
+
+&lt;p&gt;A good implementation of the function .C() can be found in the R package &lt;a href=&#34;https://www.stat.colostate.edu/~wanghn/Rpackages/bdmiso_0.9.tar.gz&#34; target=&#34;_blank&#34;&gt;bdmiso&lt;/a&gt;, which is developed by Dr. Ela Sienkiewicz from CSU.&lt;/p&gt;
+
+&lt;h2 id=&#34;rcpp&#34;&gt;Rcpp()&lt;/h2&gt;
+
+&lt;p&gt;An alternative is the &lt;a href=&#34;http://www.rcpp.org/&#34; target=&#34;_blank&#34;&gt;Rcpp&lt;/a&gt; package in R. The Rcpp package offers a seamless integration of R and C++. For detailed implementation, you can refer to my &lt;a href=&#34;https://github.com/liujl93/STplm&#34; target=&#34;_blank&#34;&gt;STplm&lt;/a&gt; R package.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</title>
+      <link>https://liujl93.github.io/post/getting-started/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/getting-started/</guid>
+      <description>
+
+&lt;h1 id=&#34;stplm&#34;&gt;STplm&lt;/h1&gt;
+
+&lt;p&gt;Spatio-Temporal Partial Linear Model and Bandwidth Selection.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;This package can be installed directly from R by running the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(devtools)
+install_github(&amp;quot;liujl93/STplm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alternatively, one can download the .tar.gz file from the main directory and then run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
