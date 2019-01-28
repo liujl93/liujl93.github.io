@@ -6,19 +6,10 @@
     <description>Recent content in Tags on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 -0600</lastBuildDate>
     
 	<atom:link href="https://liujl93.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Academic</title>
-      <link>https://liujl93.github.io/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>https://liujl93.github.io/tags/academic/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Big Data</title>
@@ -30,11 +21,29 @@
     </item>
     
     <item>
+      <title>Computing</title>
+      <link>https://liujl93.github.io/tags/computing/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/tags/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Demo</title>
       <link>https://liujl93.github.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/tags/demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://liujl93.github.io/tags/r/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/tags/r/</guid>
       <description></description>
     </item>
     

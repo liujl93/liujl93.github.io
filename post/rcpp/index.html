@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -30,10 +28,10 @@
   
     
   
-  <meta name="description" content="Ph.D. Candidate">
+  <meta name="description" content="Integrating R and C/C&#43;&#43;, Part I">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://liujl93.github.io/publication_types/1/">
+  <link rel="alternate" hreflang="en-us" href="https://liujl93.github.io/post/rcpp/">
 
   
 
@@ -126,15 +124,15 @@
   
 
   
-  <link rel="alternate" href="https://liujl93.github.io/publication_types/1/index.xml" type="application/rss+xml" title="Jialuo Liu">
-  <link rel="feed" href="https://liujl93.github.io/publication_types/1/index.xml" type="application/rss+xml" title="Jialuo Liu">
+  <link rel="alternate" href="https://liujl93.github.io/index.xml" type="application/rss+xml" title="Jialuo Liu">
+  <link rel="feed" href="https://liujl93.github.io/index.xml" type="application/rss+xml" title="Jialuo Liu">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://liujl93.github.io/publication_types/1/">
+  <link rel="canonical" href="https://liujl93.github.io/post/rcpp/">
 
   
   
@@ -146,19 +144,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Jialuo Liu">
-  <meta property="og:url" content="https://liujl93.github.io/publication_types/1/">
-  <meta property="og:title" content="1 | Jialuo Liu">
-  <meta property="og:description" content="Ph.D. Candidate"><meta property="og:image" content="https://liujl93.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://liujl93.github.io/post/rcpp/">
+  <meta property="og:title" content="Calling C/C&#43;&#43; from R and multithreading with OpenMP | Jialuo Liu">
+  <meta property="og:description" content="Integrating R and C/C&#43;&#43;, Part I"><meta property="og:image" content="https://liujl93.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2013-07-01T00:00:00-06:00">
+  <meta property="article:published_time" content="2019-01-27T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-01-27T00:00:00-07:00">
   
 
   
 
   
 
-  <title>1 | Jialuo Liu</title>
+  <title>Calling C/C&#43;&#43; from R and multithreading with OpenMP | Jialuo Liu</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -371,7 +371,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -387,38 +389,202 @@
   
 
   
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Calling C/C&#43;&#43; from R and multithreading with OpenMP</h1>
+
+  
+  <p class="page-subtitle">Integrating R and C/C++, Part I</p>
+  
+
+  
+    
+
+
+<meta content="2019-01-27 00:00:00 -0700 MST" itemprop="datePublished">
+<meta content="2018-01-27 00:00:00 -0700 MST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        <a href="/authors/jialuo-liu/">Jialuo Liu</a>
+      </span>
+    </span>
+    
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Jan 27, 2018</time>
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fliujl93.github.io%2fpost%2frcpp%2f&amp;title=Calling%20C%2fC%2b%2b%20from%20R%20and%20multithreading%20with%20OpenMP"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Calling%20C%2fC%2b%2b%20from%20R%20and%20multithreading%20with%20OpenMP&amp;body=https%3a%2f%2fliujl93.github.io%2fpost%2frcpp%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>During the <a href="https://community.amstat.org/envr/events/envr2018workshop" target="_blank">2018 ENVR Workshop</a>, I attended the short course &ldquo;High Performance Computing for Spatial Data&rdquo; taught by <a href="http://blue.for.msu.edu/" target="_blank">Dr. Andrew Finley</a> and Dr. Dorit Hammerling.
+The official site for the short course can be accessed <a href="http://blue.for.msu.edu/envr18/" target="_blank">here</a> and the slides can be found <a href="http://blue.for.msu.edu/envr18/slides/R-api.pdf" target="_blank">here</a>.</p>
+
+<p>There are three functions for integrating R and C/C++:</p>
+
+<ul>
+<li>.Call()</li>
+<li>External()</li>
+<li>.C()</li>
+</ul>
+
+<p>In this short course, some detailed exercises regarding .Call() can be found. In briefly, you will need</p>
+
+<ul>
+<li>A C/C++ function (filename.cpp) and an R wrapper function (filename.R)</li>
+<li>Compile the C/C++ code (in R):</li>
+</ul>
+
+<pre><code class="language-r">  system(&quot;R CMD SHLIB filename.cpp&quot;)
+</code></pre>
+
+<ul>
+<li>Load the compiled object (filename.so in MacOS or Linux or filename.dll in Windows) in R:</li>
+</ul>
+
+<pre><code class="language-r">dyn.load(&quot;filename.so&quot;)
+</code></pre>
+
+<p>A complete example can be found <a href="exercise_1a.html" target="_blank">here</a>.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/computing/">Computing</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">1</h1>
-
   
 
-  
-</div>
 
 
 
-<div class="universal-wrapper">
-  
 
-  
-  
-  <div>
-    <h2><a href="/publication/clothing-search/">Mobile visual clothing search</a></h2>
-    <div class="article-style">
+
+
       
-      We present a mobile visual clothing search system whereby a smart phone user can either choose a social networking photo or take a new photo of a person wearing clothing of interest and search for similar clothing in a retail database. From the query …
       
-    </div>
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/stplm/">STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
   </div>
-  
+</article>
 
-  
-
-</div>
 <div class="container">
   <footer class="site-footer">
 
@@ -568,6 +734,4 @@
 
   </body>
 </html>
-
-
 
