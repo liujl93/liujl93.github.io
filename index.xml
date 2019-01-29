@@ -171,6 +171,8 @@ print(&#39;stdev:&#39;, stats.stdev())
 
 &lt;p&gt;In this post, I will use Apache Spark and MLlib (Spark machine learning library) to build a movie recommender system.&lt;/p&gt;
 
+&lt;p&gt;Prerequisite: &lt;a href=&#34;https://liujl93.github.io/post/pyspark/&#34; target=&#34;_blank&#34;&gt;Install PySpark on MacOS&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;The results are based on Python 3.7 with Spark 2.4.&lt;/p&gt;
 
 &lt;h2 id=&#34;datasets-from-movielens-https-grouplens-org-datasets-movielens-latest&#34;&gt;Datasets: from &lt;a href=&#34;https://grouplens.org/datasets/movielens/latest/&#34; target=&#34;_blank&#34;&gt;Movielens&lt;/a&gt;&lt;/h2&gt;
