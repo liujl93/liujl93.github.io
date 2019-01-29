@@ -57,6 +57,176 @@
     </item>
     
     <item>
+      <title>Install PySpark on MacOS</title>
+      <link>https://liujl93.github.io/post/pyspark/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/pyspark/</guid>
+      <description>
+
+&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;Jupyter&lt;/code&gt; notebook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+pip install jupyter
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;PySpark&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Prerequisite: Java 8 or higher&lt;/li&gt;
+&lt;li&gt;From Apache Spark &lt;a href=&#34;https://spark.apache.org/downloads.html&#34; target=&#34;_blank&#34;&gt;downloads page&lt;/a&gt;, choose an appropriate repository.&lt;/li&gt;
+&lt;li&gt;unzip the downloaded file and move it to the directory: /opt/ (you might need sudo mv)&lt;/li&gt;
+&lt;li&gt;create a symbolic link: ln -s (you might need sudo ln)&lt;/li&gt;
+&lt;li&gt;in your bash(~/.bashrc or ~/.zshrc), configure the environment variables SPARK_HOME, PATH and PYSPARK_DRIVER_PYTHON.&lt;/li&gt;
+&lt;li&gt;source bash(~/.bashrc or ~/.zshrc) or restart terminal.&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;pyspark&lt;/code&gt; from your intended directory.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+$ wget http://mirrors.ocf.berkeley.edu/apache/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
+$ tar xzf spark-2.4.0-bin-hadoop2.7.tgz
+$ mv spark-2.4.0-bin-hadoop2.7 /opt/spark-2.4.0
+$ ln -s /opt/spark-2.4.0 /opt/spark̀
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+$ vim ~/.zshrc
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press i and copy the following code to your bash file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=&#39;notebook&#39;
+#For python 3, You have to add the line below or you will get an error
+# export PYSPARK_PYTHON=python3
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+source ~/.zshrc
+pystark
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;test-your-installation&#34;&gt;Test your installation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In your jupyter notebook, show SparkContext.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will see something like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;SparkContext
+
+Spark UI
+
+Version
+v2.4.0
+Master
+local[*]
+AppName
+PySparkShell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Try the following example, from Michael Galarnyk&amp;rsquo;s &lt;a href=&#34;https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sc = SparkContext.getOrCreate()
+import numpy as np
+TOTAL = 1000000
+dots = sc.parallelize([2.0 * np.random.random(2) - 1.0 for i in range(TOTAL)]).cache()
+print(&amp;quot;Number of random points:&amp;quot;, dots.count())
+stats = dots.stats()
+print(&#39;Mean:&#39;, stats.mean())
+print(&#39;stdev:&#39;, stats.stdev())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additional &lt;a href=&#34;http://spark.apache.org/examples.html&#34; target=&#34;_blank&#34;&gt;examples&lt;/a&gt; are provided on the Spark official site.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Movie Recommendation Engine using Spark</title>
+      <link>https://liujl93.github.io/post/movierec/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/movierec/</guid>
+      <description>
+
+&lt;p&gt;In this post, I will use Apache Spark and MLlib (Spark machine learning library) to build a movie recommender system.&lt;/p&gt;
+
+&lt;p&gt;The results are based on Python 3.7 with Spark 2.4.&lt;/p&gt;
+
+&lt;h2 id=&#34;datasets-from-movielens-https-grouplens-org-datasets-movielens-latest&#34;&gt;Datasets: from &lt;a href=&#34;https://grouplens.org/datasets/movielens/latest/&#34; target=&#34;_blank&#34;&gt;Movielens&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Full data set (24 million ratings, 40,000 movies, 250,000 users).&lt;/li&gt;
+&lt;li&gt;A smaller data set (100836 ratings, 3683 tag application across 9742 movies, 610 users, &lt;sup&gt;1996&lt;/sup&gt;&amp;frasl;&lt;sub&gt;03&lt;/sub&gt;-&lt;sup&gt;2018&lt;/sup&gt;&amp;frasl;&lt;sub&gt;09&lt;/sub&gt;)&lt;/li&gt;
+&lt;li&gt;Each user rated at least 20 movies, unique user-id.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mllib-machine-learning-library-in-spark&#34;&gt;MLlib : Machine Learning Library in Spark&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Consists of common ML algorithms, including classification, regression, clustering, and collaborative filtering.&lt;/li&gt;
+&lt;li&gt;two packages in this library:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;spark.mllib&lt;/em&gt;&lt;/strong&gt;: handles data in RDDs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;spark.ml&lt;/em&gt;&lt;/strong&gt;: handles data in DataFrames&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;recommendation-system-strategies&#34;&gt;Recommendation System Strategies&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://liujl93.github.io/img/post/movierec/movierec4.png&#34; alt=&#34;Strategies&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This graph is summarized from the paper &amp;ldquo;Matrix factorization techniques for recommender systems.&amp;rdquo; Refer to it for more insights on collaborative filtering and two illuminating cartoons.&lt;/p&gt;
+
+&lt;p&gt;In this post, we will be using the alternating least squares algorithm, from &lt;code&gt;pyspark.ml.recommendation&lt;/code&gt;. To use it, do&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+from pyspark.ml.recommendation import ALS
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;some-useful-sparksql-commands&#34;&gt;Some useful sparksql commands&lt;/h2&gt;
+
+&lt;p&gt;To query and explore the data, we will use some spark SQL commands. Here are a brief list of some useful sparksql commands.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://liujl93.github.io/img/post/movierec/movierec2.jpeg&#34; alt=&#34;Sparksql&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;run-the-notebook&#34;&gt;Run the notebook&lt;/h2&gt;
+
+&lt;p&gt;Equipped with the knowledge of collaborative filtering, let&amp;rsquo;s get some hands-on &lt;a href=&#34;https://github.com/liujl93/Movie-Recommendation-Engine-using-Spark/blob/master/MovieLens-Recommendation-System-PySpark-ALS.ipynb&#34; target=&#34;_blank&#34;&gt;experience&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Koren, Yehuda, Robert Bell, and Chris Volinsky. &amp;ldquo;Matrix factorization techniques for recommender systems.&amp;rdquo; Computer 8 (2009): 30-37.&lt;/li&gt;
+&lt;li&gt;F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Movie recommender system with Spark machine learning&#34; target=&#34;_blank&#34;&gt;Movie recommender system with Spark machine learning&lt;/a&gt; by IBM.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Parallel Programming in R on High Performance Computing (HPC) systems at CSU</title>
       <link>https://liujl93.github.io/post/summit/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>

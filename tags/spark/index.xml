@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spark on Jialuo Liu</title>
+    <link>https://liujl93.github.io/tags/spark/</link>
+    <description>Recent content in Spark on Jialuo Liu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://liujl93.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install PySpark on MacOS</title>
+      <link>https://liujl93.github.io/post/pyspark/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/pyspark/</guid>
+      <description>Prerequisite  Install Jupyter notebook  pip install jupyter   Install PySpark  Prerequisite: Java 8 or higher From Apache Spark downloads page, choose an appropriate repository. unzip the downloaded file and move it to the directory: /opt/ (you might need sudo mv) create a symbolic link: ln -s (you might need sudo ln) in your bash(~/.bashrc or ~/.zshrc), configure the environment variables SPARK_HOME, PATH and PYSPARK_DRIVER_PYTHON. source bash(~/.</description>
+    </item>
+    
+    <item>
+      <title>Movie Recommendation Engine using Spark</title>
+      <link>https://liujl93.github.io/post/movierec/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/movierec/</guid>
+      <description>In this post, I will use Apache Spark and MLlib (Spark machine learning library) to build a movie recommender system.
+The results are based on Python 3.7 with Spark 2.4.
+Datasets: from Movielens  Full data set (24 million ratings, 40,000 movies, 250,000 users). A smaller data set (100836 ratings, 3683 tag application across 9742 movies, 610 users, 1996&amp;frasl;03-2018&amp;frasl;09) Each user rated at least 20 movies, unique user-id.  MLlib : Machine Learning Library in Spark  Consists of common ML algorithms, including classification, regression, clustering, and collaborative filtering.</description>
+    </item>
+    
+  </channel>
+</rss>
