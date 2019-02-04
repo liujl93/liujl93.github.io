@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Kaggle Project: House Prices (Advanced Regression Techniques) </title>
-      <link>https://liujl93.github.io/post/kagglehp/kagglehp/</link>
-      <pubDate>Sun, 03 Feb 2019 22:25:17 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/post/kagglehp/kagglehp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Calling C/C&#43;&#43; from R and multithreading with OpenMP</title>
       <link>https://liujl93.github.io/post/rcpp/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
@@ -39,6 +30,15 @@ There are three functions for integrating R and C/C++:
       
       <guid>https://liujl93.github.io/post/pyspark/</guid>
       <description>Prerequisite  Install Jupyter notebook  pip install jupyter   Install PySpark  Prerequisite: Java 8 or higher From Apache Spark downloads page, choose an appropriate repository. unzip the downloaded file and move it to the directory: /opt/ (you might need sudo mv) create a symbolic link: ln -s (you might need sudo ln) in your bash(~/.bashrc or ~/.zshrc), configure the environment variables SPARK_HOME, PATH and PYSPARK_DRIVER_PYTHON. source bash(~/.</description>
+    </item>
+    
+    <item>
+      <title>Kaggle Project: House Prices (Advanced Regression Techniques) </title>
+      <link>https://liujl93.github.io/post/kagglehp/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/kagglehp/</guid>
+      <description>Please refer to this notebook.</description>
     </item>
     
     <item>
@@ -75,15 +75,6 @@ Road-map for Running Your R Code on Summit 1. Code Preparation. For convenience,
 Installation This package can be installed directly from R by running the following code:
 library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from github and then run:
 install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://liujl93.github.io/post/kagglehp/kagglehp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://liujl93.github.io/post/kagglehp/kagglehp/</guid>
-      <description>kaggleHP   /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
     </item>
     
   </channel>
