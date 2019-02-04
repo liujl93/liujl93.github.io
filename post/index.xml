@@ -33,15 +33,6 @@ There are three functions for integrating R and C/C++:
     </item>
     
     <item>
-      <title>Kaggle Project: House Prices (Advanced Regression Techniques) </title>
-      <link>https://liujl93.github.io/post/kagglehp/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/post/kagglehp/</guid>
-      <description>Please refer to this notebook.</description>
-    </item>
-    
-    <item>
       <title>Movie Recommendation Engine using Spark</title>
       <link>https://liujl93.github.io/post/movierec/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
