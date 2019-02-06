@@ -77,6 +77,8 @@
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;            dyn.load(&amp;quot;filename.so&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Refer to this &lt;a href=&#34;http://liujl93.github.io/files/exercise_1a.html&#34; target=&#34;_blank&#34;&gt;notebook&lt;/a&gt; for a complete implementation.&lt;/p&gt;
+
 &lt;h2 id=&#34;c&#34;&gt;.C()&lt;/h2&gt;
 
 &lt;p&gt;A good implementation of the function .C() can be found in the R package &lt;a href=&#34;https://www.stat.colostate.edu/~wanghn/Rpackages/bdmiso_0.9.tar.gz&#34; target=&#34;_blank&#34;&gt;bdmiso&lt;/a&gt;, which is developed by Dr. Ela Sienkiewicz from CSU.&lt;/p&gt;
