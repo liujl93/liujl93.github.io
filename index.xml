@@ -10,7 +10,7 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>A Comprehensive Introduction of Time Series Analysis in Python</title>
+      <title>A Comprehensive Introduction to Time Series Analysis in Python</title>
       <link>https://liujl93.github.io/post/tsintro/</link>
       <pubDate>Tue, 05 Feb 2019 18:49:45 -0700</pubDate>
       
@@ -19,7 +19,7 @@
 
 &lt;p&gt;In this post, I did a summary of commonly used time series techniques based on two Posts &lt;a href=&#34;https://nbviewer.jupyter.org/github/Yorko/mlcourse_open/blob/master/jupyter_english/topic09_time_series/topic9_part1_time_series_python.ipynb?flush_cache=true&#34; target=&#34;_blank&#34;&gt;Time series analysis in Python&lt;/a&gt; and &lt;a href=&#34;http://www.blackarbs.com/blog/time-series-analysis-in-python-linear-models-to-garch/11/1/2016&#34; target=&#34;_blank&#34;&gt;Time Series Analysis (TSA) in Python - Linear Models to GARCH&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Please refer to this &lt;a href=&#34;http://liujl93.github.io/files/introTS.html&#34; target=&#34;_blank&#34;&gt;notebook&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please refer to this &lt;a href=&#34;http://liujl93.github.io/files/IntroTS.html&#34; target=&#34;_blank&#34;&gt;notebook&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
