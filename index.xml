@@ -193,16 +193,6 @@ print(&#39;stdev:&#39;, stats.stdev())
     </item>
     
     <item>
-      <title>Kaggle Project: House Prices (Advanced Regression Techniques) </title>
-      <link>https://liujl93.github.io/post/kagglehp/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/post/kagglehp/</guid>
-      <description>&lt;p&gt;Please refer to this &lt;a href=&#34;http://liujl93.github.io/files/kaggleHP.html&#34; target=&#34;_blank&#34;&gt;notebook&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Movie Recommendation Engine using Spark</title>
       <link>https://liujl93.github.io/post/movierec/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
@@ -265,42 +255,6 @@ from pyspark.ml.recommendation import ALS
 &lt;li&gt;Koren, Yehuda, Robert Bell, and Chris Volinsky. &amp;ldquo;Matrix factorization techniques for recommender systems.&amp;rdquo; Computer 8 (2009): 30-37.&lt;/li&gt;
 &lt;li&gt;F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;Movie recommender system with Spark machine learning&#34; target=&#34;_blank&#34;&gt;Movie recommender system with Spark machine learning&lt;/a&gt; by IBM.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Notes: Feature Engineering Coursera Course</title>
-      <link>https://liujl93.github.io/post/ggfe/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/post/ggfe/</guid>
-      <description>
-
-&lt;h1 id=&#34;raw-data-to-features&#34;&gt;Raw Data to Features&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Features Known at Prediction-time&lt;/li&gt;
-&lt;li&gt;Features should be Numeric and has meaningful magnitude&lt;/li&gt;
-&lt;li&gt;Features Should Have Enough Examples&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;representing-features&#34;&gt;Representing Features&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;one-hot encoding (dummy variables): when numeric but magnitude doesn&amp;rsquo;t make sense or categorical&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;tf.feature_column.categorical_column_with_vacabulary_list(&#39;employeeId&#39;,vacabulary_list=[&#39;8345&#39;,&#39;72345&#39;,&#39;87654&#39;])&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tf.feature_column.categorical_column_with_identity(&#39;employeeId&#39;,num_buckets=5)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tf.feature_column&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Missing: Flag(0,1)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Discretize&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h2 id=&#34;scaling&#34;&gt;Scaling&lt;/h2&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

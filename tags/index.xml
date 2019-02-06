@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Cloud</title>
-      <link>https://liujl93.github.io/tags/cloud/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/tags/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Computing</title>
       <link>https://liujl93.github.io/tags/computing/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
@@ -44,15 +35,6 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Feature Engineering</title>
-      <link>https://liujl93.github.io/tags/feature-engineering/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/tags/feature-engineering/</guid>
       <description></description>
     </item>
     
@@ -129,15 +111,6 @@
     </item>
     
     <item>
-      <title>TensorFlow</title>
-      <link>https://liujl93.github.io/tags/tensorflow/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Time Series</title>
       <link>https://liujl93.github.io/tags/time-series/</link>
       <pubDate>Tue, 05 Feb 2019 18:49:45 -0700</pubDate>
@@ -158,7 +131,7 @@
     <item>
       <title>python</title>
       <link>https://liujl93.github.io/tags/python/</link>
-      <pubDate>Mon, 04 Feb 2019 15:13:16 -0700</pubDate>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/tags/python/</guid>
       <description></description>
