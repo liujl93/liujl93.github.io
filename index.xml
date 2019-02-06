@@ -48,7 +48,7 @@
       <guid>https://liujl93.github.io/post/rcpp/</guid>
       <description>
 
-&lt;p&gt;This post is related to a short course &lt;a href=&#34;http://blue.for.msu.edu/envr18/&#34; target=&#34;_blank&#34;&gt;High Performance Computing for Spatial Data&lt;/a&gt; taught by &lt;a href=&#34;http://blue.for.msu.edu/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Finley&lt;/a&gt; and Dr. Dorit Hammerling at &lt;a href=&#34;https://community.amstat.org/envr/events/envr2018workshop&#34; target=&#34;_blank&#34;&gt;2018 ENVR Workshop&lt;/a&gt;. An useful slide can be found &lt;a href=&#34;http://blue.for.msu.edu/envr18/slides/R-api.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This post is related to a short course &lt;a href=&#34;http://blue.for.msu.edu/envr18/&#34; target=&#34;_blank&#34;&gt;High Performance Computing for Spatial Data&lt;/a&gt; taught by &lt;a href=&#34;http://blue.for.msu.edu/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Finley&lt;/a&gt; and Dr. Dorit Hammerling at &lt;a href=&#34;https://community.amstat.org/envr/events/envr2018workshop&#34; target=&#34;_blank&#34;&gt;2018 ENVR Workshop&lt;/a&gt;. A useful slide can be found &lt;a href=&#34;http://blue.for.msu.edu/envr18/slides/R-api.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;There are three functions for integrating R and C/C++:&lt;/p&gt;
 
