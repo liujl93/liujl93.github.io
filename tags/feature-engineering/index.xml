@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature Engineering on Jialuo Liu</title>
+    <link>https://liujl93.github.io/tags/feature-engineering/</link>
+    <description>Recent content in Feature Engineering on Jialuo Liu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://liujl93.github.io/tags/feature-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes: Feature Engineering Coursera Course</title>
+      <link>https://liujl93.github.io/post/ggfe/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/ggfe/</guid>
+      <description> Raw Data to Features  Features Known at Prediction-time Features should be Numeric and has meaningful magnitude Features Should Have Enough Examples  Representing Features  one-hot encoding (dummy variables): when numeric but magnitude doesn&amp;rsquo;t make sense or categorical
+ tf.feature_column.categorical_column_with_vacabulary_list(&#39;employeeId&#39;,vacabulary_list=[&#39;8345&#39;,&#39;72345&#39;,&#39;87654&#39;]) tf.feature_column.categorical_column_with_identity(&#39;employeeId&#39;,num_buckets=5) tf.feature_column  Missing: Flag(0,1)
+ Discretize
+ Scaling  </description>
+    </item>
+    
+  </channel>
+</rss>
