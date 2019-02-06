@@ -47,5 +47,17 @@ library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternative
 install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
     </item>
     
+    <item>
+      <title>STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</title>
+      <link>https://liujl93.github.io/project/stplm/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/project/stplm/</guid>
+      <description> STplm Spatio-Temporal Partial Linear Model and Bandwidth Selection.
+Installation This package can be installed directly from R by running the following code:
+library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from github and then run:
+install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
+    </item>
+    
   </channel>
 </rss>

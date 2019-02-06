@@ -60,6 +60,14 @@
     
     <url>
     
+      <loc>https://liujl93.github.io/project/stplm/</loc>
+      <lastmod>2018-01-27T00:00:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://liujl93.github.io/tutorial/example/</loc>
       <lastmod>2018-09-09T00:00:00-06:00</lastmod>
     </url>
@@ -84,7 +92,7 @@
     
     <url>
     
-      <loc>https://liujl93.github.io/talk/</loc>
+      <loc>https://liujl93.github.io/project/</loc>
       <lastmod>2017-01-01T00:00:00-07:00</lastmod>
     </url>
     
@@ -93,6 +101,14 @@
     <url>
     
       <loc>https://liujl93.github.io/publication/</loc>
+      <lastmod>2017-01-01T00:00:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/talk/</loc>
       <lastmod>2017-01-01T00:00:00-07:00</lastmod>
     </url>
     
@@ -217,6 +233,13 @@
     
     <url>
     
+      <loc>https://liujl93.github.io/publication/krylov/</loc>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://liujl93.github.io/talk/krylov/</loc>
     </url>
     
@@ -226,15 +249,6 @@
     
       <loc>https://liujl93.github.io/tags/movielens/</loc>
       <lastmod>2018-01-27T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://liujl93.github.io/project/</loc>
-      <lastmod>2016-04-27T00:00:00-06:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -280,6 +294,13 @@
       <loc>https://liujl93.github.io/tags/sql/</loc>
       <lastmod>2018-01-27T00:00:00-07:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://liujl93.github.io/publication/spl/</loc>
     </url>
     
   

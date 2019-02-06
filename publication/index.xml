@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Jialuo Liu</title>
+    <title>Research on Jialuo Liu</title>
     <link>https://liujl93.github.io/publication/</link>
-    <description>Recent content in Publications on Jialuo Liu</description>
+    <description>Recent content in Research on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="https://liujl93.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Krylov Subspace Method for Large Spatial Datasets</title>
+      <link>https://liujl93.github.io/publication/krylov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liujl93.github.io/publication/krylov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semiparametric Modeling and Bandwidth Selection for Continuous-Time Geostatistical Data</title>
+      <link>https://liujl93.github.io/publication/spl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liujl93.github.io/publication/spl/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
