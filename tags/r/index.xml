@@ -6,10 +6,19 @@
     <description>Recent content in R on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 16:05:58 -0700</lastBuildDate>
     
 	<atom:link href="https://liujl93.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Final Project of Udacity A/B Testing Course</title>
+      <link>https://liujl93.github.io/post/ud257/</link>
+      <pubDate>Mon, 18 Feb 2019 16:05:58 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/ud257/</guid>
+      <description>Please refer to this notebook.</description>
+    </item>
     
     <item>
       <title>Calling C/C&#43;&#43; from R and multithreading with OpenMP</title>
