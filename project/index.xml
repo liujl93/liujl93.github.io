@@ -12,24 +12,12 @@
     
     
     <item>
-      <title>STplm: Spatio-Temporal Partial Linear Model and Bandwidth Selection.</title>
-      <link>https://liujl93.github.io/project/stplm/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
-      
-      <guid>https://liujl93.github.io/project/stplm/</guid>
-      <description> STplm Spatio-Temporal Partial Linear Model and Bandwidth Selection.
-Installation This package can be installed directly from R by running the following code:
-library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from github and then run:
-install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
-    </item>
-    
-    <item>
       <title>Krylov Subspace Method for Large Spatial Datasets</title>
       <link>https://liujl93.github.io/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/project/internal-project/</guid>
-      <description>This project developed methods for inference in spatio-temporal models that allow for locally stationarity. A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors.</description>
+      <description>Maximum likelihood method for irregularly spaced spatial datasets is computationally intensive, as it involves the manipulation of sizable dense covariance matrices. Finding the exact likelihood is clearly impractical, especially for large datasets. We present an approximation to the Gaussian log-likelihood function using Krylov subspace methods. This method reduces the computational complexity from $O(n^3)$ operations to $O(n^2)$ for dense matrices and further to linear if matrices are sparse. Specifically, this algorithm comprises two parts: 1) an implementation of conjugate gradient method; and 2) a stochastic estimator of the log-determinant based on Monte Carlo method and Lanczos quadrature rule.</description>
     </item>
     
     <item>
@@ -38,7 +26,7 @@ install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = 
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/project/external-project/</guid>
-      <description>Maximum likelihood method for irregularly spaced spatial datasets is computationally intensive, as it involves the manipulation of sizable dense covariance matrices. Finding the exact likelihood is clearly impractical, especially for large datasets. We present an approximation to the Gaussian log-likelihood function using Krylov subspace methods. This method reduces the computational complexity from $O(n^3)$ operations to $O(n^2)$ for dense matrices and further to linear if matrices are sparse. Specifically, this algorithm comprises two parts: 1) an implementation of conjugate gradient method; and 2) a stochastic estimator of the log-determinant based on Monte Carlo method and Lanczos quadrature rule.</description>
+      <description>This project developed methods for inference in spatio-temporal models that allow for locally stationarity. A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors.</description>
     </item>
     
   </channel>
