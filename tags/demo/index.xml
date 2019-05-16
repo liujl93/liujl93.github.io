@@ -17,7 +17,7 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/project/external-project/</guid>
-      <description>This project developed methods for inference in spatio-temporal models that allow for locally stationarity. A novel spatio-temporal distance expanding (STED) asymptotic framework on a fixed domain is proposed to study local stationarity. Some examples of spatio-temporal models including zero-mean Gaussian process model and simple linear regression model are studied. In particular, we consider a semiparametric model and develop a profile likelihood method. A cross-validation bandwidth selection procedure based on bimodal kernel is proposed to address the effect of correlated errors.</description>
+      <description>Spatio-temporal Modeling and Inference.</description>
     </item>
     
   </channel>

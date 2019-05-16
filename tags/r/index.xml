@@ -17,7 +17,7 @@
       <pubDate>Mon, 18 Feb 2019 16:05:58 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/ud257/</guid>
-      <description>Please refer to this notebook.</description>
+      <description>An Approach to Reduce Early Online Course Cancellation</description>
     </item>
     
     <item>
@@ -26,10 +26,7 @@
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/rcpp/</guid>
-      <description>This post is related to a short course High Performance Computing for Spatial Data taught by Dr. Andrew Finley and Dr. Dorit Hammerling at 2018 ENVR Workshop. A useful slide can be found here.
-There are three functions for integrating R and C/C++:
- .Call() External() .C()  .Call() In this short course, a detailed explanation of the function .Call() is given. In brief, you will need
- A C/C++ function (filename.</description>
+      <description>Integrating R and C/C++</description>
     </item>
     
     <item>
@@ -38,10 +35,7 @@ There are three functions for integrating R and C/C++:
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/summit/</guid>
-      <description>Parallel computing in Python and Matlab is similar, a useful post can be found here.
-Good problems for such type of high performance computing systems are the so-called &amp;ldquo;Embarassingly parallelizable problems&amp;rdquo;. That is, the problem can be separated to a number of mutually independent tasks.
-Road-map for Running Your R Code on Summit 1. Code Preparation. For convenience, I often prepare three files:
- A bash file: (job.txt)  Summit #!</description>
+      <description>Rmpi implementation on Summit/Cray</description>
     </item>
     
     <item>
@@ -50,10 +44,7 @@ Road-map for Running Your R Code on Summit 1. Code Preparation. For convenience,
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/stplm/</guid>
-      <description> STplm Spatio-Temporal Partial Linear Model and Bandwidth Selection.
-Installation This package can be installed directly from R by running the following code:
-library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from github and then run:
-install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
+      <description>An R package</description>
     </item>
     
   </channel>

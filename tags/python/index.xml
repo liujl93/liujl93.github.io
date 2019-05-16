@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Jialuo Liu</title>
+    <title>Python on Jialuo Liu</title>
     <link>https://liujl93.github.io/tags/python/</link>
-    <description>Recent content in python on Jialuo Liu</description>
+    <description>Recent content in Python on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 15:13:16 -0700</lastBuildDate>
     
 	<atom:link href="https://liujl93.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kaggle Project: House Prices (Advanced Regression Techniques) </title>
+      <link>https://liujl93.github.io/post/kagglehouse/</link>
+      <pubDate>Mon, 04 Feb 2019 15:13:16 -0700</pubDate>
+      
+      <guid>https://liujl93.github.io/post/kagglehouse/</guid>
+      <description>A stacking approach for prediction</description>
+    </item>
     
     <item>
       <title>Install PySpark on MacOS</title>
@@ -17,7 +26,7 @@
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/pyspark/</guid>
-      <description>Prerequisite  Install Jupyter notebook  pip install jupyter   Install PySpark  Prerequisite: Java 8 or higher From Apache Spark downloads page, choose an appropriate repository. unzip the downloaded file and move it to the directory: /opt/ (you might need sudo mv) create a symbolic link: ln -s (you might need sudo ln) in your bash(~/.bashrc or ~/.zshrc), configure the environment variables SPARK_HOME, PATH and PYSPARK_DRIVER_PYTHON. source bash(~/.</description>
+      <description>A quick installation guide</description>
     </item>
     
   </channel>

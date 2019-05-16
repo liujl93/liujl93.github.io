@@ -17,10 +17,7 @@
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/movierec/</guid>
-      <description>In this post, I will use Apache Spark and MLlib (Spark machine learning library) to build a movie recommender system.
-Prerequisite: Install PySpark on MacOS
-The results are based on Python 3.7 with Spark 2.4.
-Datasets: from Movielens  Full data set (24 million ratings, 40,000 movies, 250,000 users). A smaller data set (100836 ratings, 3683 tag application across 9742 movies, 610 users, 1996&amp;frasl;03-2018&amp;frasl;09) Each user rated at least 20 movies, unique user-id.</description>
+      <description>A Spark project</description>
     </item>
     
   </channel>

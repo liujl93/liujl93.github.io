@@ -17,7 +17,7 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
       <guid>https://liujl93.github.io/project/internal-project/</guid>
-      <description>Maximum likelihood method for irregularly spaced spatial datasets is computationally intensive, as it involves the manipulation of sizable dense covariance matrices. Finding the exact likelihood is clearly impractical, especially for large datasets. We present an approximation to the Gaussian log-likelihood function using Krylov subspace methods. This method reduces the computational complexity from $O(n^3)$ operations to $O(n^2)$ for dense matrices and further to linear if matrices are sparse. Specifically, this algorithm comprises two parts: 1) an implementation of conjugate gradient method; and 2) a stochastic estimator of the log-determinant based on Monte Carlo method and Lanczos quadrature rule.</description>
+      <description>Efficient Algorithm for Large Spatial Datasets.</description>
     </item>
     
   </channel>

@@ -27,7 +27,7 @@ Please refer to this notebook.</description>
       <pubDate>Mon, 18 Feb 2019 16:05:58 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/ud257/</guid>
-      <description>Please refer to this notebook.</description>
+      <description>An Approach to Reduce Early Online Course Cancellation</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ References  Time series analysis in Python Time Series Analysis (TSA) in Python 
       <pubDate>Mon, 04 Feb 2019 15:13:16 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/kagglehouse/</guid>
-      <description>Please refer to this notebook.</description>
+      <description>A stacking approach for prediction</description>
     </item>
     
     <item>
@@ -56,10 +56,7 @@ References  Time series analysis in Python Time Series Analysis (TSA) in Python 
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/rcpp/</guid>
-      <description>This post is related to a short course High Performance Computing for Spatial Data taught by Dr. Andrew Finley and Dr. Dorit Hammerling at 2018 ENVR Workshop. A useful slide can be found here.
-There are three functions for integrating R and C/C++:
- .Call() External() .C()  .Call() In this short course, a detailed explanation of the function .Call() is given. In brief, you will need
- A C/C++ function (filename.</description>
+      <description>Integrating R and C/C++</description>
     </item>
     
     <item>
@@ -68,7 +65,7 @@ There are three functions for integrating R and C/C++:
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/pyspark/</guid>
-      <description>Prerequisite  Install Jupyter notebook  pip install jupyter   Install PySpark  Prerequisite: Java 8 or higher From Apache Spark downloads page, choose an appropriate repository. unzip the downloaded file and move it to the directory: /opt/ (you might need sudo mv) create a symbolic link: ln -s (you might need sudo ln) in your bash(~/.bashrc or ~/.zshrc), configure the environment variables SPARK_HOME, PATH and PYSPARK_DRIVER_PYTHON. source bash(~/.</description>
+      <description>A quick installation guide</description>
     </item>
     
     <item>
@@ -77,10 +74,7 @@ There are three functions for integrating R and C/C++:
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/movierec/</guid>
-      <description>In this post, I will use Apache Spark and MLlib (Spark machine learning library) to build a movie recommender system.
-Prerequisite: Install PySpark on MacOS
-The results are based on Python 3.7 with Spark 2.4.
-Datasets: from Movielens  Full data set (24 million ratings, 40,000 movies, 250,000 users). A smaller data set (100836 ratings, 3683 tag application across 9742 movies, 610 users, 1996&amp;frasl;03-2018&amp;frasl;09) Each user rated at least 20 movies, unique user-id.</description>
+      <description>A Spark project</description>
     </item>
     
     <item>
@@ -89,10 +83,7 @@ Datasets: from Movielens  Full data set (24 million ratings, 40,000 movies, 250,
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/summit/</guid>
-      <description>Parallel computing in Python and Matlab is similar, a useful post can be found here.
-Good problems for such type of high performance computing systems are the so-called &amp;ldquo;Embarassingly parallelizable problems&amp;rdquo;. That is, the problem can be separated to a number of mutually independent tasks.
-Road-map for Running Your R Code on Summit 1. Code Preparation. For convenience, I often prepare three files:
- A bash file: (job.txt)  Summit #!</description>
+      <description>Rmpi implementation on Summit/Cray</description>
     </item>
     
     <item>
@@ -101,10 +92,7 @@ Road-map for Running Your R Code on Summit 1. Code Preparation. For convenience,
       <pubDate>Sun, 27 Jan 2019 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/post/stplm/</guid>
-      <description> STplm Spatio-Temporal Partial Linear Model and Bandwidth Selection.
-Installation This package can be installed directly from R by running the following code:
-library(devtools) install_github(&amp;quot;liujl93/STplm&amp;quot;)  Alternatively, one can download the .tar.gz file from github and then run:
-install.packages(&amp;quot;~/STplm_0.1.0.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)  </description>
+      <description>An R package</description>
     </item>
     
   </channel>
