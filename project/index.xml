@@ -6,7 +6,7 @@
     <description>Recent content in Research on Jialuo Liu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
     
 	<atom:link href="https://liujl93.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Krylov Subspace Method for Large Spatial Datasets</title>
       <link>https://liujl93.github.io/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/project/internal-project/</guid>
       <description>Efficient Algorithm for Large Spatial Datasets.</description>
@@ -23,7 +23,7 @@
     <item>
       <title>Semiparametric Modeling and Bandwidth Selection for Continuous-Time Geostatistical Data</title>
       <link>https://liujl93.github.io/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>https://liujl93.github.io/project/external-project/</guid>
       <description>Spatio-temporal Modeling and Inference.</description>
